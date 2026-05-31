@@ -17,7 +17,7 @@
   <div class="blob3"></div>
 
   <!-- Nav -->
-  <nav>
+  <nav id="navbar">
     <div class="nav-logo">Maicon<span>.</span>dev</div>
     <ul class="nav-links">
       <li><a href="#sobre">Sobre</a></li>
@@ -25,6 +25,11 @@
       <li><a href="#projetos">Projetos</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </nav>
 
   <!-- HERO -->
@@ -35,7 +40,7 @@
           <div class="hero-tag">Disponível para oportunidades</div>
           <h1 class="hero-name">
             Maicon<br>
-            <span class="line2">Dias.</span>
+            <span class="line2"><span class="typing-text">Dias.</span></span>
           </h1>
           <p class="hero-sub">
             Desenvolvedor Front-End & Back-end apaixonado por tecnologia. Estudante de ADS criando aplicações web com foco em performance e boas práticas.
@@ -65,16 +70,16 @@
           Estou sempre buscando evoluir minhas habilidades e desenvolver soluções eficientes — tanto no que já domino quanto nas tecnologias que estou aprendendo.
         </p>
         <div class="about-stats">
-          <div class="stat-card">
-            <div class="stat-num">19<span>+</span></div>
+          <div class="stat-card" data-target="19">
+            <div class="stat-num"><span class="counter">0</span><span>+</span></div>
             <div class="stat-label">Anos de vida</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-num">3<span>+</span></div>
+          <div class="stat-card" data-target="3">
+            <div class="stat-num"><span class="counter">0</span><span>+</span></div>
             <div class="stat-label">Projetos entregues</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-num">7<span>+</span></div>
+          <div class="stat-card" data-target="7">
+            <div class="stat-num"><span class="counter">0</span><span>+</span></div>
             <div class="stat-label">Tecnologias</div>
           </div>
           <div class="stat-card">
@@ -146,10 +151,19 @@
         <h2 class="section-title">Projetos</h2>
         <p class="section-desc">Algumas das coisas que construí. Confira o GitHub para ver mais.</p>
       </div>
+
+      <!-- Filtros de Projetos -->
+      <div class="projects-filter reveal">
+        <button class="filter-btn active" data-filter="todos">Todos</button>
+        <button class="filter-btn" data-filter="front-end">Front-end</button>
+        <button class="filter-btn" data-filter="back-end">Back-end</button>
+        <button class="filter-btn" data-filter="full-stack">Full Stack</button>
+      </div>
+
       <div class="projects-grid reveal">
 
         <!-- Barbearia -->
-        <div class="project-card">
+        <div class="project-card show" data-category="front-end">
           <img src="imagens/Barbearia.png" alt="Sistema de Barbearia" class="project-thumb" onerror="this.style.display='none'">
           <div class="project-body">
             <div class="project-tags">
@@ -172,8 +186,26 @@
           </div>
         </div>
 
+        <!-- Banco de Dados -->
+        <div class="project-card show" data-category="back-end">
+          <img src="imagens/DER-DB.png" alt="Banco de Dados" class="project-thumb" onerror="this.style.display='none'">
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag orange">MySQL</span>
+            </div>
+            <h3 class="project-title">Banco De Dados</h3>
+            <p class="project-desc">Banco de dados com MySQL criado para controle de vendas e estoque.</p>
+            <div class="project-footer">
+              <a href="https://github.com/The-Diazx/Deposito-De-Bebidas-Banco-De-Dados-" target="_blank" rel="noopener noreferrer" class="project-link">
+                Ver no GitHub
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
         <!-- YouTube Clone -->
-        <div class="project-card">
+        <div class="project-card show" data-category="front-end">
           <img src="imagens/youtube-Layout.png" alt="Clone YouTube" class="project-thumb" onerror="this.style.display='none'">
           <div class="project-body">
             <div class="project-tags">
@@ -195,28 +227,8 @@
           </div>
         </div>
 
-        <!-- Calculadora -->
-        <div class="project-card">
-          <img src="imagens/calculadorapng.png" alt="calculadora-png" class="project-thumb" onerror="this.style.display='none'">
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="tag">HTML</span>
-              <span class="tag cyan">CSS</span>
-              <span class="tag green">JS</span>
-            </div>
-            <h3 class="project-title">Calculadora Básica</h3>
-            <p class="project-desc">Layout e funcionalidades básicas de calculadora recriadas com HTML, CSS e JavaScript puro.</p>
-            <div class="project-footer">
-              <a href="https://github.com/The-Diazx" target="_blank" rel="noopener noreferrer" class="project-link">
-                Ver no GitHub
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
         <!-- Mais projetos -->
-        <div class="project-card" style="border-style: dashed; justify-content: center; align-items: center; min-height: 240px;">
+        <div class="project-card show" style="border-style: dashed; justify-content: center; align-items: center; min-height: 240px;" data-category="full-stack">
           <div class="project-body" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem;">
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--muted)" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
             <p style="color: var(--muted); font-size: 0.9rem;">Mais projetos no GitHub</p>
@@ -276,17 +288,7 @@
     </div>
   </footer>
 
-  <script>
-    // Scroll reveal
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
+  <!-- Scripts -->
+  <script src="java.js"></script>
 </body>
 </html>
